@@ -21,9 +21,11 @@ public class Band {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
-    private String image;
+    private String logo;
     @NotEmpty(message = "Provide a name.")
     private String name;
+    @NotEmpty
+    private String image;
     @NotEmpty(message = "Provide a country.")
     private String country;
     private String kind;
