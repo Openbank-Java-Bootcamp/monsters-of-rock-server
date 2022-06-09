@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -20,15 +19,15 @@ public class Festival {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private List<Date> dates;
+    private String dates;
     @NotNull
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "streetAddress", column = @Column(name = "AccountHolders_address_Street_Address")),
-            @AttributeOverride(name = "streetNumber", column = @Column(name = "AccountHolders_address_Street_number")),
-            @AttributeOverride(name = "city", column = @Column(name = "AccountHolders_address_city")),
-            @AttributeOverride(name = "country", column = @Column(name = "AccountHolders_address_country")),
-            @AttributeOverride(name = "postCode", column = @Column(name = "AccountHolders_address_postalCode"))
+            @AttributeOverride(name = "streetAddress", column = @Column(name = "Festival_address_Street_Address")),
+            @AttributeOverride(name = "streetNumber", column = @Column(name = "Festival_address_Street_number")),
+            @AttributeOverride(name = "city", column = @Column(name = "Festival_address_city")),
+            @AttributeOverride(name = "country", column = @Column(name = "Festival_address_country")),
+            @AttributeOverride(name = "postCode", column = @Column(name = "Festival_address_postalCode"))
     })
     private Address address;
     @NotNull
