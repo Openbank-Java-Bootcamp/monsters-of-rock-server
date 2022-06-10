@@ -18,7 +18,11 @@ public class Festival {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
+    private String image;
+    @NotNull
     private String name;
+    @NotNull
     private String dates;
     @NotNull
     @Embedded
@@ -32,8 +36,8 @@ public class Festival {
     private Address address;
     @NotNull
     private String website;
-    private String history;
-    private String extraInfo;
+    private String map;
+    private String tickets;
     private
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

@@ -12,20 +12,20 @@ public class Address {
 
     @NotNull
     private String streetName;
-    @NotNull
-    private int streetNumber;
+
+    private String streetNumber;
     @NotNull
     private String city;
     @NotNull
     private String country;
-
+    @NotNull
     private String postCode;
 
 
     public Address() {
     }
 
-    public Address(String streetName, int streetNumber, String city, String country, String postCode) {
+    public Address(String streetName, String streetNumber, String city, String country, String postCode) {
         this.streetName = streetName;
         this.streetNumber = streetNumber;
         this.city = city;
@@ -41,11 +41,11 @@ public class Address {
         this.streetName = streetName;
     }
 
-    public int getStreetNumber() {
+    public String getStreetNumber() {
         return streetNumber;
     }
 
-    public void setStreetNumber(int streetNumber) {
+    public void setStreetNumber(String streetNumber) {
         this.streetNumber = streetNumber;
     }
 
