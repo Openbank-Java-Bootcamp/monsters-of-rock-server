@@ -1,6 +1,5 @@
 package com.ironhack.monstersofrockserver.model;
 
-import com.ironhack.monstersofrockserver.utils.Address;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,18 +24,16 @@ public class Festival {
     @NotNull
     private String dates;
     @NotNull
-    @Embedded
-    @AttributeOverrides({
-            @AttributeOverride(name = "streetAddress", column = @Column(name = "Festival_address_Street_Address")),
-            @AttributeOverride(name = "streetNumber", column = @Column(name = "Festival_address_Street_number")),
-            @AttributeOverride(name = "city", column = @Column(name = "Festival_address_city")),
-            @AttributeOverride(name = "country", column = @Column(name = "Festival_address_country")),
-            @AttributeOverride(name = "postCode", column = @Column(name = "Festival_address_postalCode"))
-    })
-    private Address address;
+    private String address;
+    @NotNull
+    private String city;
+    @NotNull
+    private String country;
     @NotNull
     private String website;
-    private String map;
+    @NotNull
+    private String info;
+    @NotNull
     private String tickets;
     private
     @ManyToMany(fetch = FetchType.EAGER)
@@ -44,6 +41,7 @@ public class Festival {
             name = "festivals_bands",
             joinColumns = { @JoinColumn(name = "festival_id")},
             inverseJoinColumns = { @JoinColumn(name = "band_id")}
+
     )
     List<Band> bands;
 }
