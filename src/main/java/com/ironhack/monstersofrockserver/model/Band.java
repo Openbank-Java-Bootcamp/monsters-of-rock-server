@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 
@@ -21,10 +18,12 @@ public class Band {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
+    @Lob
     private String logo;
     @NotEmpty(message = "Provide a name.")
     private String name;
     @NotEmpty
+    @Lob
     private String image;
     @NotEmpty(message = "Provide a country.")
     private String country;

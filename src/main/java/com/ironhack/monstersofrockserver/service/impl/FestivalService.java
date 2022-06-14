@@ -1,6 +1,7 @@
 package com.ironhack.monstersofrockserver.service.impl;
 
 import com.ironhack.monstersofrockserver.model.Festival;
+import com.ironhack.monstersofrockserver.repository.BandRepository;
 import com.ironhack.monstersofrockserver.repository.FestivalRepository;
 import com.ironhack.monstersofrockserver.service.interfaces.FestivalServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,6 @@ public class FestivalService implements FestivalServiceInterface {
     public Festival findById(Long id){
         return festivalRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Festival Not Found"));
     }
-
     public void saveFestival(Festival festival){
         if(festival.getId() !=null){
             Optional<Festival> festivalFromDb = festivalRepository.findById(festival.getId());

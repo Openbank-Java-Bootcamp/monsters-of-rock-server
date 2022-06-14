@@ -18,6 +18,7 @@ public class Festival {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
+    @Lob
     private String image;
     @NotNull
     private String name;
@@ -44,4 +45,5 @@ public class Festival {
 
     )
     List<Band> bands;
+
 }
