@@ -5,7 +5,7 @@
 
 <br>
 
-### Technologies Used:
+## Technologies Used:
 <ul>
 <li>Java</li>
 <li>Java/Spring Boot for API development.</li>
@@ -25,7 +25,7 @@
 <br>
 ![model](/src/img/model.png)
 
-##Server routes table
+## Server routes table
 
 Check the routes here http://localhost:5005/swagger-ui.html#/
 
@@ -39,7 +39,6 @@ Check the routes here http://localhost:5005/swagger-ui.html#/
 
 ## Resources
 
-<p>My dear teachers Raymond Moroun and Shaun Reilly</p>
+<p>My dear teachers Raymond Maroun and Shaun Reilly</p>
 <p>https://www.baeldung.com/</p>
 <p>https://docs.jboss.org/hibernate/stable/validator/api/</p>
-
