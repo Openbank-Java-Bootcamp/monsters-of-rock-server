@@ -31,13 +31,13 @@ Check the routes here http://localhost:5005/swagger-ui.html#/
 
 ![endpoints](/src/img/endpoints.png)
 
-##Future Work
+## Future Work
 <p>1. Implement Roles</p>
 <p>2. Add information to the User profile</p>
 <p>3. Create a Country Model </p>
 
 
-##Resources
+## Resources
 
 <p>My dear teachers Raymond Moroun and Shaun Reilly</p>
 <p>https://www.baeldung.com/</p>
